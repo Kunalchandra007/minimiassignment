@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Minimis</title>
+    <meta
+      name="description"
+      content="A web-search chat that resolves the date, keeps the record, and checks whether an old answer still holds."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,520;9..144,640&family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,560;1,6..72,440&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/landing.css" />
+  </head>
+  <body class="home">
+    <div class="grain" aria-hidden="true"></div>
+    <header class="home-bar">
+      <a class="mark" href="/">Minimis</a>
+      <nav>
+        <a href="#method">Method</a>
+        <a href="#questions">Questions</a>
+        <a class="enter" href="/chat.html">Open the record</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Checked against the live web</p>
+        <h1>The date is settled before the model speaks.</h1>
+        <p class="hero-copy">
+          Minimis is a search chat with a memory you can audit. It resolves Monday and last Tuesday in your timezone, quotes what you actually asked, and will not invent a conversation that is not in the thread.
+        </p>
+        <div class="hero-actions">
+          <a class="enter" href="/chat.html">Start a thread</a>
+          <a class="enter ghost" href="#method">How a turn works</a>
+        </div>
+      </div>
+
+      <aside class="specimen" aria-label="Specimen of a change-check answer">
+        <header>
+          <span>Specimen · Monday 9 November</span>
+          <span>Not a live price</span>
+        </header>
+        <ol>
+          <li>
+            <div>
+              <strong>HubSpot</strong>
+              <em>$20/user, verified on the pricing page</em>
+            </div>
+            <span class="verdict same">Unchanged</span>
+          </li>
+          <li>
+            <div>
+              <strong>Salesforce</strong>
+              <em>$25/user then, $30/user now</em>
+            </div>
+            <span class="verdict changed">Changed</span>
+          </li>
+          <li>
+            <div>
+              <strong>Copper</strong>
+              <em>Changelog did not mention the plan</em>
+            </div>
+            <span class="verdict thin">Could not verify</span>
+          </li>
+        </ol>
+        <footer>One verdict per old claim. A source, or an honest gap.</footer>
+      </aside>
+    </section>
+
+    <section class="band" id="method">
+      <article>
+        <p class="num">01 · Time</p>
+        <h2>No date arithmetic.</h2>
+        <p>Bare weekdays, “last Tuesday”, “3 November”, and “since then” are resolved in code, in your timezone, before the prompt is built.</p>
+      </article>
+      <article>
+        <p class="num">02 · Record</p>
+        <h2>Quote, or admit it.</h2>
+        <p>That day’s messages are injected verbatim. If the day is empty, the model is told there is no record. It is not allowed to fill the silence.</p>
+      </article>
+      <article>
+        <p class="num">03 · Search</p>
+        <h2>One tool, in parallel.</h2>
+        <p>Prices and launches are checked on the live web, one query per entity. A failed search is reported. It is not papered over from memory.</p>
+      </article>
+    </section>
+
+    <section class="questions" id="questions">
+      <p class="eyebrow">Try the hard questions</p>
+      <h2>Ask what changed, or what you asked on a date.</h2>
+      <div class="ask-list">
+        <a class="ask" href="/chat.html?ask=On%20Monday%20we%20shortlisted%205%20CRM%20tools%20for%20a%2020-person%20sales%20team.%20Has%20any%20of%20them%20changed%20pricing%20or%20shipped%20something%20big%20since%3F">
+          <span>Monday</span>
+          <p>On Monday we shortlisted 5 CRM tools. Has pricing or a launch changed since?</p>
+          <b>Ask</b>
+        </a>
+        <a class="ask" href="/chat.html?ask=What%20did%20I%20ask%20you%20on%203%20November%3F%20Is%20your%20answer%20still%20correct%20today%3F">
+          <span>3 November</span>
+          <p>What did I ask you on 3 November? Is that answer still correct today?</p>
+          <b>Ask</b>
+        </a>
+        <a class="ask" href="/chat.html?ask=Last%20Tuesday%20I%20asked%20you%20about%20Postgres%20hosting.%20Has%20any%20pricing%20changed%20since%20then%3F">
+          <span>Last Tuesday</span>
+          <p>Last Tuesday I asked about Postgres hosting. Has any pricing changed since then?</p>
+          <b>Ask</b>
+        </a>
+      </div>
+    </section>
+
+    <footer class="colophon">
+      <span>Minimis · one tool, web search</span>
+      <span>The thread is kept. A new chat only marks a break.</span>
+    </footer>
+  </body>
+</html>

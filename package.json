@@ -1,0 +1,36 @@
+{
+  "name": "minimis",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A web-search chat agent with deterministic time, persistent recall, and a claim ledger.",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "tsx src/index.ts",
+    "eval": "tsx src/eval/run.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@ai-sdk/google": "^3.0.145",
+    "ai": "^6.0.0",
+    "better-sqlite3": "^12.4.1",
+    "chrono-node": "^2.9.0",
+    "dotenv": "^17.2.3",
+    "express": "^4.21.2",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.19.1",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  },
+  "allowScripts": {
+    "better-sqlite3@12.11.1": true,
+    "esbuild@0.28.2": true
+  }
+}

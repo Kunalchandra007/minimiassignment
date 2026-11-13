@@ -1,0 +1,17 @@
+node_modules/
+.env
+.env.*
+!.env.example
+data/
+traces/
+demo/raw/
+demo/frames/
+dist/
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
